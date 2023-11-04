@@ -2,7 +2,9 @@ const redis = require("redis");
 require("dotenv").config();
 
 const redisClient = () => {
-  return redis.createClient();
+  return redis.createClient({
+    url: "rediss://red-cl36ekauuipc7387rco0:SBOrUaReFZPeaVvlM7V7Dc5C4JSGeCKT@oregon-redis.render.com:6379",
+  });
 };
 
 const client = redisClient();
